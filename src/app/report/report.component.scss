@@ -1,0 +1,76 @@
+/**global colors for this app**/
+$background: rgb(255, 248, 188);
+$primary: rgb(83, 42, 42);
+$secondar: rgb(156, 148, 69);
+$red: rgb(238, 17, 17);
+
+.reports {
+    padding: 10px;
+    margin: 0 auto;
+    h6 {
+      display: flex;
+      margin-top: 0;
+      gap: 20px;
+      align-items: center;
+      color: red;
+    }
+
+    .report-item {
+        background: lighten($color: $background, $amount: 10%);
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        position: relative;
+        box-shadow: 0 0 6px $secondar;
+
+        .del {
+            border: none;
+            background: $primary;
+            position:absolute;
+            right: 0;
+            top: 0;
+            cursor: pointer;
+            border-radius: 0 0 0 13px;
+        }
+        h5 {
+            border-top: 1px solid darken($color: $background, $amount: 40%);
+            border-bottom: 1px solid darken($color: $background, $amount: 40%);
+            padding: 15px 2px;
+            text-transform: capitalize;
+            font-weight: 300;
+            font-size: 1.1rem;
+        }
+        
+
+        h3 {
+            margin: 0 0 10px;
+            color: lighten($color: $primary, $amount: 10%);
+          }
+        .current-stamp {
+            
+                color: #716e6e;
+                position: absolute;
+                right: 5px;
+                bottom: 5px;
+                font-size: 10px;
+            
+        }
+      }
+      .delall {
+        border: none;
+        border-radius: 44%;
+        box-shadow: 0 0 3px darken($color: $background, $amount: 10%);
+        width: 45px;
+        height: 40px;
+        cursor: pointer;
+      }
+      
+      
+  }
+  @media (min-width: 1000px) {
+    .reports {
+        width: 400px;
+    }
+}
+
+  

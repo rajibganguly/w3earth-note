@@ -1,0 +1,57 @@
+/**global colors for this app**/
+$background: rgb(255, 248, 188);
+$primary: rgb(83, 42, 42);
+$secondar: rgb(156, 148, 69);
+
+.login {
+    margin: 45% auto;
+    width: 500px;
+    .logo {
+        padding: 10px;
+        height: 100%; // Ensure the parent container takes the full height
+        margin: 0;
+        display: flex;
+        flex-direction: column; // Stack elements vertically
+        justify-content: center; // Center vertically
+        align-items: center;
+        img {
+            text-align: center;
+        }
+        small {
+            text-align: center;
+            padding: 10px;
+            text-shadow: 0 0 5px $secondar;
+        }
+    }
+    .forms {
+        width: 400px;
+        padding: 10px;
+        .forms-block {
+            display: block;
+            margin-top: 2rem;
+            label {
+                font-size: 1rem;
+                color: $primary;
+                display: block;
+            }
+            input {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                color: $primary;
+            }
+            button {
+                padding: 10px 20px;
+                background-color: $primary;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                margin-top: 10px;
+                font-weight: bold;
+                font-size: 1.1rem;
+            }
+        }
+    }
+}

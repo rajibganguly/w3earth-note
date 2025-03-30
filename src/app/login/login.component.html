@@ -1,0 +1,16 @@
+<section class="login">
+    <div class="logo">
+        <img src='./../../../assets/logo.jpg' alt="Logo" />
+        <small>w3earth note</small>
+    </div>
+    <div class="forms">
+        <div class="forms-block">
+            <label>Enter your name</label>
+            <input type="text" name="name" [(ngModel)]="name" required />
+            <small>This is one time process. You need to save your name for the first time.</small>
+        </div>
+        <div class="forms-block center">
+            <button (click)="onSubmit($event)">Login</button>
+        </div>
+    </div>
+</section>
