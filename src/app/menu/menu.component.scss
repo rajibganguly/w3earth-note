@@ -1,7 +1,8 @@
 /**global colors for this app**/
-$background: rgb(255, 248, 188);
-$primary: rgb(83, 42, 42);
-$secondar: rgb(156, 148, 69);
+$background: rgb(255, 255, 255);
+$primary: rgb(5, 0, 77);
+$secondar: rgb(10, 124, 218);
+
 
 section {
     
@@ -17,14 +18,10 @@ section {
         justify-content: space-between;
         align-items: center;
         .action {
-            background: darken($color: $background, $amount: 15%);
-            border-radius: 48%;
-            padding: 10px;
             svg {
               color: $primary;
             }
             &:hover {
-                background: darken($color: $background, $amount: 10%); 
                 svg {
                     opacity: 0.5;
                 }

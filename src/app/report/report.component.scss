@@ -1,7 +1,8 @@
 /**global colors for this app**/
-$background: rgb(255, 248, 188);
-$primary: rgb(83, 42, 42);
-$secondar: rgb(156, 148, 69);
+$background: rgb(255, 255, 255);
+$primary: rgb(5, 0, 77);
+$secondar: rgb(10, 124, 218);
+
 $red: rgb(238, 17, 17);
 
 .reports {
@@ -9,10 +10,15 @@ $red: rgb(238, 17, 17);
     margin: 0 auto;
     h6 {
       display: flex;
-      margin-top: 0;
-      gap: 20px;
+      justify-content: center;
       align-items: center;
-      color: red;
+      margin-top: 0;
+      color: $red;
+      width:123px;
+      border-radius: 30px;
+      border: 1px solid $red;
+      padding: 5px 10px;
+      background: white;
     }
 
     .report-item {
@@ -33,12 +39,13 @@ $red: rgb(238, 17, 17);
             border-radius: 0 0 0 13px;
         }
         h5 {
-            border-top: 1px solid darken($color: $background, $amount: 40%);
-            border-bottom: 1px solid darken($color: $background, $amount: 40%);
+            border-top: 1px solid darken($color: $background, $amount: 20%);
+            border-bottom: 1px solid darken($color: $background, $amount: 20%);
             padding: 15px 2px;
             text-transform: capitalize;
             font-weight: 300;
             font-size: 1.1rem;
+            margin: 0;
         }
         
 
@@ -58,10 +65,6 @@ $red: rgb(238, 17, 17);
       }
       .delall {
         border: none;
-        border-radius: 44%;
-        box-shadow: 0 0 3px darken($color: $background, $amount: 10%);
-        width: 45px;
-        height: 40px;
         cursor: pointer;
       }
       

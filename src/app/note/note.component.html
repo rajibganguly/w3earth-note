@@ -3,16 +3,13 @@
     <h2>Welcome <span class="usernameTitle">{{name}}</span>!</h2>
     <form (submit)="onSubmit($event)">
         <div class="forms-block">
-            <label for="title">Title</label>
-            <input id="title" type="text" name="title" [(ngModel)]="note.title" required />
+            <input id="title" type="text" name="title" [(ngModel)]="note.title" placeholder="Enter Title of Your Note!" required />
         </div>
         <div class="forms-block">
-            <label for="details">Details</label>
-            <textarea id="details" name="details" [(ngModel)]="note.details" required></textarea>
+            <textarea id="details" name="details" [(ngModel)]="note.details" placeholder="Enter Details of your note" required></textarea>
         </div>
         <div class="forms-block">
-            <label for="dateTime">Date & Time</label>
-            <input id="dateTime" type="datetime-local" name="dateTime" [(ngModel)]="note.dateTime" required />
+            <input id="dateTime" type="datetime-local" name="dateTime" placeholder="Select Date" [(ngModel)]="note.dateTime" required />
         </div>
         <div class="forms-block">
             <button type="submit">Save</button>
