@@ -1,0 +1,25 @@
+<div class="calculator">
+  <div class="display">
+    <input type="text" class="input-num" [value]="currentInput" readonly />
+    <div class="result">{{ result }}</div>
+  </div>
+  <div class="buttons">
+    <button (click)="appendToInput('1')">1</button>
+    <button (click)="appendToInput('2')">2</button>
+    <button (click)="appendToInput('3')">3</button>
+    <button (click)="appendToInput('+')">+</button>
+    <button (click)="appendToInput('4')">4</button>
+    <button (click)="appendToInput('5')">5</button>
+    <button (click)="appendToInput('6')">6</button>
+    <button (click)="appendToInput('-')">-</button>
+    <button (click)="appendToInput('7')">7</button>
+    <button (click)="appendToInput('8')">8</button>
+    <button (click)="appendToInput('9')">9</button>
+    <button (click)="appendToInput('*')">*</button>
+    <button (click)="appendToInput('0')">0</button>
+    <button (click)="appendToInput('.')">.</button>
+    <button (click)="appendToInput('/')">/</button>
+    <button (click)="calculateResult()">=</button>
+    <button (click)="clearInput()">AC</button>
+  </div>
+</div>

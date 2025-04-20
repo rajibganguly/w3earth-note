@@ -3,11 +3,20 @@ $background: rgb(255, 255, 255);
 $primary: rgb(5, 0, 77);
 $secondar: rgb(10, 124, 218);
 
-
 .forms {
   padding: 10px;
   margin: 0 auto;
-  height: 100vh;
+  
+  .util-tools {
+    .help-tool {
+      background: none;
+      color: $secondar;
+      border: 1px solid $secondar;
+      border-radius: 5px;
+      margin: 0 8px;
+      cursor: pointer;
+    }
+  }
   .forms-block {
     display: block;
     margin-top: 0;
@@ -32,7 +41,7 @@ $secondar: rgb(10, 124, 218);
     }
     button {
       padding: 7px 20px;
-      width: 100%;
+      width: 96%;
       border: none;
       cursor: pointer;
       margin-top: 10px;

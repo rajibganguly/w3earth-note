@@ -1,6 +1,13 @@
 <app-menu></app-menu>
 <div class="forms">
     <h2>Welcome <span class="usernameTitle">{{name}}</span>!</h2>
+    <div class="util-tools">
+        <small>Available Tools:</small>
+        <button class="help-tool" (click)="CalculatorApp()">calculator ▼</button>
+        <div class="util-tools-list">
+            <app-calculator *ngIf="calcFlag"></app-calculator>
+        </div>
+    </div>
     <form (submit)="onSubmit($event)">
         <div class="forms-block">
             <input id="title" type="text" name="title" [(ngModel)]="note.title" placeholder="Enter Title of Your Note!" required />

@@ -2,11 +2,14 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MenuComponent } from '../menu/menu.component';
 import { UserService } from '../user.service';
+import { CalculatorComponent } from '../calculator/calculator.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-note',
   standalone: true,
-  imports: [FormsModule, MenuComponent],
+  imports: [FormsModule, CommonModule, MenuComponent, CalculatorComponent],
+  // The component is standalone and imports FormsModule, MenuComponent, and CalculatorComponent
   templateUrl: './note.component.html',
   styleUrl: './note.component.scss'
 })
@@ -18,9 +21,10 @@ export class NoteComponent {
     dateTime: '',
     currentTime: new Date().toISOString()
   };
+  calcFlag: boolean = false;
 
   user = localStorage.getItem('user');
-  name = '';
+  name = this.user;
 
     constructor(private userService: UserService) {
       this.name = JSON.parse(this.userService.getUser()) // Get user from UserService and convert to uppercase
@@ -42,5 +46,14 @@ export class NoteComponent {
       dateTime: '',
       currentTime: new Date().toISOString()
     };
+  }
+
+  CalculatorApp() {
+    if(this.calcFlag == false) {
+      this.calcFlag = true;
+    }
+    else {
+      this.calcFlag = false;
+    }
   }
 }
